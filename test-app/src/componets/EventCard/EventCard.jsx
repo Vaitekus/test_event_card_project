@@ -22,6 +22,10 @@ const EventCard = (event) => {
     let titleTextColorClasses = titleTextColors[type];
     let buttonType = buttonTypes[type];
     const  cardSpace = badgeText ? 'pt-5' : '';
+
+    let goToNextStep = () => {
+        console.log("goToNextStep");
+    }
     
     return (
         <section className={`group relative rounded border-2 bg-white p-4 mb-3 last:mb-0 
@@ -47,7 +51,7 @@ const EventCard = (event) => {
                     <p>{city}, {country}</p>
                 </div>
             </div>
-            <Button text="Bekijk Tickets" type={buttonType} size="lg" width="stretch">
+            <Button text="Bekijk Tickets" type={buttonType} size="lg" width="stretch" action={goToNextStep}>
                 <span className="icon-ticket text-[40px] pr-1"></span>
             </Button>
         </section> 

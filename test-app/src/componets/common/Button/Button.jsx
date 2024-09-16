@@ -16,13 +16,13 @@ const stretches = {
     stretch: 'w-full',
 }
 
-const Button = ({ text, type, size, width, children }) => {
+const Button = ({ text, type, size, width, action, children }) => {
     let typeClasses = types[type];
     let sizeClasses = sizes[size];
     let widthClasses = stretches[width];
 
     return (
-        <button type="button" className={`flex justify-center items-center font-bold uppercase 
+        <button type="button" onClick={action} className={`flex justify-center items-center font-bold uppercase 
             ${sizeClasses} ${typeClasses} ${widthClasses}`}>
             {children}
             {text}
