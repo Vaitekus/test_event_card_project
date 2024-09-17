@@ -21,7 +21,6 @@ const events = [
     country: "Country"
   },
   {
-    type: "default",
     badgeText: "",
     title: "Daniel Arends",
     tourName: "20 jaar Ashton Brothers",

@@ -17,7 +17,7 @@ const buttonTypes = {
 }
 
 const EventCard = (event) => {
-    const {type, badgeText, title, tourName, weekday, day, month, year, time, venue, city, country} = event.event;
+    const {type = "default", badgeText, title, tourName, weekday, day, month, year, time, venue, city, country} = event.event;
     let borderColorsClasses = borderColors[type];
     let titleTextColorClasses = titleTextColors[type];
     let buttonType = buttonTypes[type];
@@ -28,7 +28,7 @@ const EventCard = (event) => {
     }
     
     return (
-        <section className={`group relative rounded border-2 bg-white p-4 mb-3 last:mb-0 
+        <section className={`relative rounded border-2 bg-white p-4 mb-3 last:mb-0 
                   ${borderColorsClasses} ${cardSpace}`}>
             <Badge text={badgeText} type={type}>
                 {/*Temporary usage*/}
@@ -47,7 +47,7 @@ const EventCard = (event) => {
                 </div>
                 <div className="*:text-sm *:leading-17 sm:pl-3">
                     <time dateTime="">{time} uur</time>
-                    <p>{venue}</p>
+                    <p className="font-bold">{venue}</p>
                     <p>{city}, {country}</p>
                 </div>
             </div>

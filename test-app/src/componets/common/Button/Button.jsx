@@ -16,7 +16,7 @@ const stretches = {
     stretch: 'w-full',
 }
 
-const Button = ({ text, type, size, width, action, children }) => {
+const Button = ({ text, type = "default", size, width, action, children }) => {
     let typeClasses = types[type];
     let sizeClasses = sizes[size];
     let widthClasses = stretches[width];
